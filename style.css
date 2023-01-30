@@ -1,0 +1,11 @@
+img {
+  width: 85%;
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* to fix the width of body and navbar with invisible scrollbar */
+::-webkit-scrollbar {
+    width: 0px;
+}

@@ -1,0 +1,11 @@
+---
+title: "Personal Website"
+---
+
+Hello, World! My name is Michelle. I am awesome.
+
+<br>
+
+<div style="width:400px">
+![](img/geneseo-logo-vertical.png)
+<div>

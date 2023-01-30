@@ -1,0 +1,33 @@
+name: "personal-website"
+output_dir: "."
+theme: style.css
+navbar:
+  title: "Michelle Gagliardo"
+  left:
+    - text: "Project"
+      href: teamproj0.html
+    - text: "Homework"
+      menu: 
+        - text: "homework 0"
+          href: hw0.html
+  right:
+    - icon: fa-github fa-lg
+      href: https://github.com/bcecon
+    - icon: fa-instagram fa-lg
+      href: https://instagram.com
+output:
+  html_document:
+    css: style.css
+    include:
+      after_body: target_blank.html
+    
+    theme: default  # theme for website
+      # “default”, “bootstrap”, “cerulean”, “cosmo”, “darkly”, “flatly”, 
+      # “journal”, “lumen”, “paper”, “readable”, “sandstone”, “simplex”, 
+      # “spacelab”, “united”, “yeti”
+      
+    highlight: default  # code style
+      # default, tango, pygments, kate, monochrome, espresso, 
+      # zenburn, haddock, breezedark, and textmate
+
+
