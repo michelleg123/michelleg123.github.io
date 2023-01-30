@@ -1,6 +1,6 @@
 # danl-web-template
 
-https://danl-web.netlify.app
+https://michelleg123.github.io
 
 repo on github
-hosted on netlify
+hosted on github
