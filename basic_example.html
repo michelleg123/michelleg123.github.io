@@ -9,9 +9,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="Awesome Me" />
 
+<meta name="date" content="2023-01-30" />
 
-<title>Personal Website</title>
+<title>Hello R Markdown</title>
 
 <script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -283,23 +285,34 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Personal Website</h1>
+<h1 class="title toc-ignore">Hello R Markdown</h1>
+<h4 class="author">Awesome Me</h4>
+<h4 class="date">January 30, 2023</h4>
 
 </div>
 
 
-<p>Hello, World! My name is Michelle. I am awesome.</p>
-<ul>
-<li><em>Name</em>: Michelle</li>
-<li><em>Ocupation</em>: Student</li>
-<li><em>Hobbies</em>: Blogging data analytics. Here is a super cool
-photo. <br> <img src="img/geneseo-logo-vertical.png"
-style="width:50.0%" /> <br></li>
-</ul>
-<div style="width:400px">
-<img src="img/geneseo-logo-vertical.png" />
-<div>
+<div id="r-markdown-intro" class="section level1">
+<h1>R Markdown: Intro</h1>
+<p>This is a paragraph in an <a href="https://rmarkdown.rstudio.com">R
+Markdown</a> document.</p>
+<div id="ggplot-exmaple" class="section level2">
+<h2>ggplot exmaple</h2>
+<p>Below is a code chunk:</p>
+<pre class="r"><code>library(tidyverse)
 
+fit &lt;- lm(dist ~ speed, data = cars)
+b &lt;- coef(fit)
+
+ggplot(cars) +
+  geom_smooth( aes( x = speed, 
+                    y = dist ),
+               method = lm)</code></pre>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="basic_example_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>The slope of the regression is 3.9324088.</p>
+</div>
+</div>
 
 <script type="text/javascript" src="links.js"></script>
 

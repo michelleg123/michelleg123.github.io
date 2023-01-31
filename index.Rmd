@@ -4,6 +4,13 @@ title: "Personal Website"
 
 Hello, World! My name is Michelle. I am awesome.
 
+
+- *Name*: Michelle
+- *Ocupation*: Student
+- *Hobbies*: Blogging data analytics. 
+Here is a super cool photo. 
+<br>
+![](img/geneseo-logo-vertical.png){width=50%}
 <br>
 
 <div style="width:400px">
