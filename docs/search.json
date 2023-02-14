@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "basic-example.html",
+    "href": "basic-example.html",
+    "title": "Habbit",
+    "section": "",
+    "text": "(tab content) 1\n\n\n\n(tab content) 2\n\nlibrary(tidyverse)\nggplot(mpg) +\n  geom_boxplot(aes(x = class, y = hwy))"
+  },
+  {
+    "objectID": "basic-example.html#section-x",
+    "href": "basic-example.html#section-x",
+    "title": "Habbit",
+    "section": "0.2 Section X",
+    "text": "0.2 Section X\nThis is my introduction.\n\nx <- 1\nprint(x)\n\n[1] 1"
+  },
+  {
+    "objectID": "basic-example.html#section-1.1",
+    "href": "basic-example.html#section-1.1",
+    "title": "Habbit",
+    "section": "1.1 Section 1.1",
+    "text": "1.1 Section 1.1\nDrink water"
+  },
+  {
+    "objectID": "basic-example.html#section-1.2",
+    "href": "basic-example.html#section-1.2",
+    "title": "Habbit",
+    "section": "1.2 Section 1.2",
+    "text": "1.2 Section 1.2\nSleep again"
+  },
+  {
+    "objectID": "hw0.html",
+    "href": "hw0.html",
+    "title": "Homework 0",
+    "section": "",
+    "text": "The following boxplot shows how the distribution of city MPG (cty) varies by a type of cars (class).\n\nggplot(mpg) +\n  geom_boxplot(aes(x = class, y = cty, fill = class))"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Michelle Gagliardo",
+    "section": "",
+    "text": "I am a student at State University of New York at Geneseo.\nI am interested in …\nI enjoy …"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Michelle Gagliardo",
+    "section": "Education",
+    "text": "Education\nState University of New York at Geneseo, 2023 - B.A./B.S. in YOUR MAJOR - YOUR MINOR"
+  },
+  {
+    "objectID": "teamproj0.html",
+    "href": "teamproj0.html",
+    "title": "Team Project",
+    "section": "",
+    "text": "This is an example of the team project web-page."
+  },
+  {
+    "objectID": "teamproj0.html#us-county-map-of-climate-change-belief-in-2018",
+    "href": "teamproj0.html#us-county-map-of-climate-change-belief-in-2018",
+    "title": "Team Project",
+    "section": "1 US county map of climate change belief in 2018",
+    "text": "1 US county map of climate change belief in 2018\n  Estimated percentage who think that global warming is caused mostly by human activities\n\ncc_belief_county <- read_csv(\n  'https://bcdanl.github.io/data/cc_belief_county.csv'\n)\n\n\nlegend_title <- \"\"\n\nggplot(data = cc_belief_county) +\n  geom_polygon(aes(long, lat, group = group, \n                   fill = human2018),\n               color = \"grey\", size = 0.1) +\n  coord_map(\"bonne\", parameters = 41.6) + \n  scale_fill_gradient(legend_title, \n                      low='#0057e7', \n                      high='#d62d20') +\n  theme_map() + \n  theme(legend.position=\"right\") +\n  labs(caption = \"Data source: Yale Climate Change Communication\")"
+  }
+]
