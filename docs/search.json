@@ -28,18 +28,67 @@
     "text": "1.2 Section 1.2\nSleep again"
   },
   {
+    "objectID": "danl310-2023-02-14.html",
+    "href": "danl310-2023-02-14.html",
+    "title": "Habbit",
+    "section": "",
+    "text": "(tab content) 1\n\n\n\n(tab content) 2\n\nlibrary(tidyverse)\nggplot(mpg) +\n  geom_boxplot(aes(x = class, y = hwy))"
+  },
+  {
+    "objectID": "danl310-2023-02-14.html#section-x",
+    "href": "danl310-2023-02-14.html#section-x",
+    "title": "Habbit",
+    "section": "0.2 Section X",
+    "text": "0.2 Section X\nThis is my introduction.\n\nx <- 1\nprint(x)\n\n[1] 1"
+  },
+  {
+    "objectID": "danl310-2023-02-14.html#section-1.1",
+    "href": "danl310-2023-02-14.html#section-1.1",
+    "title": "Habbit",
+    "section": "1.1 Section 1.1",
+    "text": "1.1 Section 1.1\nDrink water"
+  },
+  {
+    "objectID": "danl310-2023-02-14.html#section-1.2",
+    "href": "danl310-2023-02-14.html#section-1.2",
+    "title": "Habbit",
+    "section": "1.2 Section 1.2",
+    "text": "1.2 Section 1.2\nSleep again"
+  },
+  {
     "objectID": "hw0.html",
     "href": "hw0.html",
     "title": "Homework 0",
     "section": "",
-    "text": "The following boxplot shows how the distribution of city MPG (cty) varies by a type of cars (class).\n\nggplot(mpg) +\n  geom_boxplot(aes(x = class, y = cty, fill = class))"
+    "text": "---\ntitle: “Homework 0”\nformat: html\neditor: visual\n---"
+  },
+  {
+    "objectID": "hw0.html#why-ggplot-is-awesome",
+    "href": "hw0.html#why-ggplot-is-awesome",
+    "title": "Homework 0",
+    "section": "Why ggplot is awesome",
+    "text": "Why ggplot is awesome\nThe following boxplot shows how the distribution of city MPG (cty) varies by a type of cars (class).\n\nggplot(mpg) +\n  geom_boxplot(aes(x = class, y = cty, fill = class))"
+  },
+  {
+    "objectID": "hw1.html",
+    "href": "hw1.html",
+    "title": "Homework 1",
+    "section": "",
+    "text": "title: “Homework 1”\nformat: html\neditor: visual"
+  },
+  {
+    "objectID": "hw1.html#why-ggplot-is-awesome",
+    "href": "hw1.html#why-ggplot-is-awesome",
+    "title": "Homework 1",
+    "section": "2.1 Why ggplot is awesome",
+    "text": "2.1 Why ggplot is awesome\nThe following boxplot shows how the distribution of city MPG (cty) varies by a type of cars (class).\n\nggplot(mpg) +\n  geom_boxplot(aes(x = class, y = cty, fill = class))"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Michelle Gagliardo",
     "section": "",
-    "text": "I am a student at State University of New York at Geneseo.\nI am interested in …\nI enjoy …"
+    "text": "I am a student at State University of New York at Geneseo.\nI am interested in statistics and data analysis.\nI enjoy playing the guitar and running."
   },
   {
     "objectID": "index.html#education",

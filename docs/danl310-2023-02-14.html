@@ -128,7 +128,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </head>
 
-<body class="floating nav-fixed">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -175,8 +175,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
@@ -195,11 +196,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#section-1.2" id="toc-section-1.2" class="nav-link" data-scroll-target="#section-1.2"><span class="toc-section-number">1.2</span>  Section 1.2</a></li>
   </ul></li>
   <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2"><span class="toc-section-number">2</span>  Section 2</a></li>
+  <li><a href="#ggplot-bar" id="toc-ggplot-bar" class="nav-link" data-scroll-target="#ggplot-bar"><span class="toc-section-number">3</span>  ggplot bar</a></li>
   </ul>
 </nav>
-</nav>
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -247,7 +246,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg) <span class="sc">+</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> class, <span class="at">y =</span> hwy))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="basic-example_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
+<p><img src="danl310-2023-02-14_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
@@ -282,28 +281,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="section-2" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Section 2</h1>
 <p>Wake up</p>
+</section>
+<section id="ggplot-bar" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> ggplot bar</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>socviz<span class="sc">::</span>titanic</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>      fate    sex    n percent
-1 perished   male 1364    62.0
-2 perished female  126     5.7
-3 survived   male  367    16.7
-4 survived female  344    15.6</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> titanic,</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> fate, <span class="at">y =</span> percent, <span class="at">fill =</span> sex))</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>, <span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"top"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> titanic,</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> fate, <span class="at">y =</span> percent, <span class="at">fill =</span> sex))</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>, <span class="at">stat =</span> <span class="st">"identity"</span>) <span class="sc">+</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"top"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="basic-example_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+<p><img src="danl310-2023-02-14_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p><code>oecd_sum</code> bar to visualize the trend of <code>diff</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Let's try to replicate the graph in the lecture slide. </span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Bar charts are good for visualizing the trend </span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>socviz<span class="sc">::</span>oecd_sum</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>oecd_sum</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 57 × 5
 # Groups:   year [57]
@@ -321,40 +313,78 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 10  1969  70.1  70.6 0.5   Below
 # … with 47 more rows</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(oecd_sum, <span class="fu">aes</span>(<span class="at">x=</span> year, <span class="at">y =</span> diff, <span class="at">fill =</span> hi_lo))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(oecd_sum, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> diff, <span class="at">fill =</span> hi_lo ))</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">caption =</span> <span class="st">"first line</span><span class="sc">\n</span><span class="st"> second line"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="danl310-2023-02-14_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>mpg <span class="ot">&lt;-</span> mpg </span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x=</span>class, <span class="at">fill =</span> drv))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>mpg <span class="ot">&lt;-</span> mpg</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> class, <span class="at">fill =</span> drv))</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"identity"</span>, <span class="at">alpha =</span> .<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="danl310-2023-02-14_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
 </div>
 <ul>
-<li>Gapminder practice</li>
+<li><code>gapminder</code> practice</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Revisit gapminder plots and experiment with different ways to facet the data </span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gapminder)</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>gapminder <span class="ot">&lt;-</span> gapminder</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(gapminder, <span class="fu">aes</span>(<span class="at">x =</span> pop, <span class="at">y =</span> gdpPercap))</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.3</span>) <span class="sc">+</span> </span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span> </span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(year <span class="sc">~</span> .)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gapminder)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>gapminder <span class="ot">&lt;-</span> gapminder</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(gapminder, <span class="fu">aes</span>( <span class="at">x =</span> pop, <span class="at">y =</span> gdpPercap )) </span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">alpha =</span> .<span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> lm) <span class="sc">+</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>( year <span class="sc">~</span> .)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="basic-example_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+<p><img src="danl310-2023-02-14_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Life expectancy vs gdp per capita </span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(gapminder, <span class="fu">aes</span>(<span class="at">x=</span>lifeExp, <span class="at">y =</span> gdpPercap)) </span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">geom_bin2d</span>(<span class="at">bins =</span> <span class="fu">c</span>(<span class="dv">20</span>,<span class="dv">50</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(gapminder, <span class="fu">aes</span>(<span class="at">x =</span> lifeExp, <span class="at">y =</span> gdpPercap)) </span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">geom_bin2d</span>(<span class="at">bins =</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">100</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="basic-example_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+<p><img src="danl310-2023-02-14_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Lighter the cell, more frequent the pair of values are. </span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Try binwidth instead.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>gss_sm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2,867 × 32
+    year    id ballot   age childs sibs  degree race  sex   region incom…¹ relig
+   &lt;dbl&gt; &lt;dbl&gt; &lt;labe&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;lab&gt; &lt;fct&gt;  &lt;fct&gt; &lt;fct&gt; &lt;fct&gt;  &lt;fct&gt;   &lt;fct&gt;
+ 1  2016     1 1         47      3 2     Bache… White Male  New E… $17000… None 
+ 2  2016     2 2         61      0 3     High … White Male  New E… $50000… None 
+ 3  2016     3 3         72      2 3     Bache… White Male  New E… $75000… Cath…
+ 4  2016     4 1         43      4 3     High … White Fema… New E… $17000… Cath…
+ 5  2016     5 3         55      2 2     Gradu… White Fema… New E… $17000… None 
+ 6  2016     6 2         53      2 2     Junio… White Fema… New E… $60000… None 
+ 7  2016     7 1         50      2 2     High … White Male  New E… $17000… None 
+ 8  2016     8 3         23      3 6     High … Other Fema… Middl… $30000… Cath…
+ 9  2016     9 1         45      3 5     High … Black Male  Middl… $60000… Prot…
+10  2016    10 3         71      4 1     Junio… White Male  Middl… $60000… None 
+# … with 2,857 more rows, 20 more variables: marital &lt;fct&gt;, padeg &lt;fct&gt;,
+#   madeg &lt;fct&gt;, partyid &lt;fct&gt;, polviews &lt;fct&gt;, happy &lt;fct&gt;, partners &lt;fct&gt;,
+#   grass &lt;fct&gt;, zodiac &lt;fct&gt;, pres12 &lt;labelled&gt;, wtssall &lt;dbl&gt;,
+#   income_rc &lt;fct&gt;, agegrp &lt;fct&gt;, ageq &lt;fct&gt;, siblings &lt;fct&gt;, kids &lt;fct&gt;,
+#   religion &lt;fct&gt;, bigregion &lt;fct&gt;, partners_rc &lt;fct&gt;, obama &lt;dbl&gt;, and
+#   abbreviated variable name ¹​income16</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>?gss_sm</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(gss_sm, <span class="fu">aes</span>(<span class="at">x =</span> bigregion, <span class="at">fill =</span> religion))</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge2"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="danl310-2023-02-14_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+</div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(socviz)</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>socviz<span class="sc">::</span>gss_sm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>gss_sm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2,867 × 32
     year    id ballot   age childs sibs  degree race  sex   region incom…¹ relig
@@ -376,91 +406,78 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 #   religion &lt;fct&gt;, bigregion &lt;fct&gt;, partners_rc &lt;fct&gt;, obama &lt;dbl&gt;, and
 #   abbreviated variable name ¹​income16</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>gss_sm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>rel_by_region <span class="ot">&lt;-</span> gss_sm <span class="sc">%&gt;%</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>( bigregion, religion ) <span class="sc">%&gt;%</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarize</span>( <span class="at">N =</span> <span class="fu">n</span>() ) <span class="sc">%&gt;%</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>( <span class="at">freq =</span> N <span class="sc">/</span> <span class="fu">sum</span>(N),</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">pct =</span> <span class="fu">round</span>( (freq<span class="sc">*</span><span class="dv">100</span>), <span class="dv">0</span>) )</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>rel_by_region</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2,867 × 32
-    year    id ballot   age childs sibs  degree race  sex   region incom…¹ relig
-   &lt;dbl&gt; &lt;dbl&gt; &lt;labe&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;lab&gt; &lt;fct&gt;  &lt;fct&gt; &lt;fct&gt; &lt;fct&gt;  &lt;fct&gt;   &lt;fct&gt;
- 1  2016     1 1         47      3 2     Bache… White Male  New E… $17000… None 
- 2  2016     2 2         61      0 3     High … White Male  New E… $50000… None 
- 3  2016     3 3         72      2 3     Bache… White Male  New E… $75000… Cath…
- 4  2016     4 1         43      4 3     High … White Fema… New E… $17000… Cath…
- 5  2016     5 3         55      2 2     Gradu… White Fema… New E… $17000… None 
- 6  2016     6 2         53      2 2     Junio… White Fema… New E… $60000… None 
- 7  2016     7 1         50      2 2     High … White Male  New E… $17000… None 
- 8  2016     8 3         23      3 6     High … Other Fema… Middl… $30000… Cath…
- 9  2016     9 1         45      3 5     High … Black Male  Middl… $60000… Prot…
-10  2016    10 3         71      4 1     Junio… White Male  Middl… $60000… None 
-# … with 2,857 more rows, 20 more variables: marital &lt;fct&gt;, padeg &lt;fct&gt;,
-#   madeg &lt;fct&gt;, partyid &lt;fct&gt;, polviews &lt;fct&gt;, happy &lt;fct&gt;, partners &lt;fct&gt;,
-#   grass &lt;fct&gt;, zodiac &lt;fct&gt;, pres12 &lt;labelled&gt;, wtssall &lt;dbl&gt;,
-#   income_rc &lt;fct&gt;, agegrp &lt;fct&gt;, ageq &lt;fct&gt;, siblings &lt;fct&gt;, kids &lt;fct&gt;,
-#   religion &lt;fct&gt;, bigregion &lt;fct&gt;, partners_rc &lt;fct&gt;, obama &lt;dbl&gt;, and
-#   abbreviated variable name ¹​income16</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(gss_sm, <span class="fu">aes</span>(<span class="at">x=</span>relig, <span class="at">fill =</span> bigregion))</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge2"</span>) <span class="sc">+</span> <span class="fu">coord_flip</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="basic-example_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use pipes to summarize data. Group each religion by each big region : </span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(socviz)</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>rel_by_region <span class="ot">&lt;-</span> gss_sm <span class="sc">%&gt;%</span> </span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(bigregion, relig) <span class="sc">%&gt;%</span> </span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">N =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span> </span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">freq =</span> N <span class="sc">/</span> <span class="fu">sum</span>(N), <span class="at">pct =</span> <span class="fu">round</span>((freq<span class="sc">*</span><span class="dv">100</span>), <span class="dv">0</span> ))</span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>rel_by_region</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 52 × 5
+<pre><code># A tibble: 24 × 5
 # Groups:   bigregion [4]
-   bigregion relig                  N    freq   pct
-   &lt;fct&gt;     &lt;fct&gt;              &lt;int&gt;   &lt;dbl&gt; &lt;dbl&gt;
- 1 Northeast Protestant           158 0.324      32
- 2 Northeast Catholic             162 0.332      33
- 3 Northeast Jewish                27 0.0553      6
- 4 Northeast None                 112 0.230      23
- 5 Northeast Other                  8 0.0164      2
- 6 Northeast Buddhism               3 0.00615     1
- 7 Northeast Hinduism               6 0.0123      1
- 8 Northeast Moslem/Islam           2 0.00410     0
- 9 Northeast Orthodox-Christian     1 0.00205     0
-10 Northeast Christian              7 0.0143      1
-# … with 42 more rows</code></pre>
+   bigregion religion       N    freq   pct
+   &lt;fct&gt;     &lt;fct&gt;      &lt;int&gt;   &lt;dbl&gt; &lt;dbl&gt;
+ 1 Northeast Protestant   158 0.324      32
+ 2 Northeast Catholic     162 0.332      33
+ 3 Northeast Jewish        27 0.0553      6
+ 4 Northeast None         112 0.230      23
+ 5 Northeast Other         28 0.0574      6
+ 6 Northeast &lt;NA&gt;           1 0.00205     0
+ 7 Midwest   Protestant   325 0.468      47
+ 8 Midwest   Catholic     172 0.247      25
+ 9 Midwest   Jewish         3 0.00432     0
+10 Midwest   None         157 0.226      23
+# … with 14 more rows</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Now, we can use the values directly from the summarized data frame</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(rel_by_region, </span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>            <span class="fu">aes</span>( <span class="at">x =</span> bigregion, </span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>                 <span class="at">y =</span> pct, </span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>                 <span class="at">fill =</span> relig))</span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">geom_col</span>( <span class="at">position =</span> <span class="st">"dodge2"</span> ) <span class="sc">+</span></span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Region"</span>, </span>
-<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">y =</span> <span class="st">"Percent"</span>, </span>
-<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">fill =</span> <span class="st">"Religion"</span>) <span class="sc">+</span></span>
-<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(legend.position </span>
-<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>            <span class="ot">=</span> <span class="st">"top"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>( rel_by_region, </span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>             <span class="fu">aes</span>( <span class="at">x =</span> bigregion, </span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>                  <span class="at">y =</span> pct, </span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>                  <span class="at">fill =</span> religion))</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">geom_col</span>( <span class="at">position =</span> <span class="st">"dodge2"</span> ) <span class="sc">+</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Region"</span>, </span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">y =</span> <span class="st">"Percent"</span>, </span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">fill =</span> <span class="st">"Religion"</span>) <span class="sc">+</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(legend.position </span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>            <span class="ot">=</span> <span class="st">"top"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="basic-example_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
+<p><img src="danl310-2023-02-14_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Replicate the bar graph </span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="co"># library(hrbrthemes)</span></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="co"># p &lt;- ggplot(rel_by_region, aes(x = religion, y = pct, fill = religio))</span></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co"># p + geom_col() + facet_grid( .~bigregion) + </span></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># coord_flip() + guides(fill = "none") + theme_ipsum() + </span></span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># labs(X = NULL)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(hrbrthemes)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(rel_by_region,</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>            <span class="fu">aes</span>(<span class="at">x =</span> religion, <span class="at">y =</span> pct, <span class="at">fill =</span> religion ))</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">geom_col</span>() <span class="sc">+</span> <span class="fu">facet_grid</span>( .<span class="sc">~</span> bigregion) <span class="sc">+</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span> <span class="fu">guides</span>(<span class="at">fill =</span> <span class="st">"none"</span>) <span class="sc">+</span> <span class="fu">theme_ipsum</span>() <span class="sc">+</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Percent"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="danl310-2023-02-14_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="672"></p>
+</div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Donors vs year</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(skimr)</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="co"># organdata</span></span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>skimr<span class="sc">::</span><span class="fu">skim</span>(organdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>organdata</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 238 × 21
+   country  year       donors   pop pop_d…¹   gdp gdp_lag health healt…² pubhe…³
+   &lt;chr&gt;    &lt;date&gt;      &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt; &lt;int&gt;   &lt;int&gt;  &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+ 1 Austral… NA          NA    17065   0.220 16774   16591   1300    1224     4.8
+ 2 Austral… 1991-01-01  12.1  17284   0.223 17171   16774   1379    1300     5.4
+ 3 Austral… 1992-01-01  12.4  17495   0.226 17914   17171   1455    1379     5.4
+ 4 Austral… 1993-01-01  12.5  17667   0.228 18883   17914   1540    1455     5.4
+ 5 Austral… 1994-01-01  10.2  17855   0.231 19849   18883   1626    1540     5.4
+ 6 Austral… 1995-01-01  10.2  18072   0.233 21079   19849   1737    1626     5.5
+ 7 Austral… 1996-01-01  10.6  18311   0.237 21923   21079   1846    1737     5.6
+ 8 Austral… 1997-01-01  10.3  18518   0.239 22961   21923   1948    1846     5.7
+ 9 Austral… 1998-01-01  10.5  18711   0.242 24148   22961   2077    1948     5.9
+10 Austral… 1999-01-01   8.67 18926   0.244 25445   24148   2231    2077     6.1
+# … with 228 more rows, 11 more variables: roads &lt;dbl&gt;, cerebvas &lt;int&gt;,
+#   assault &lt;int&gt;, external &lt;int&gt;, txp_pop &lt;dbl&gt;, world &lt;chr&gt;, opt &lt;chr&gt;,
+#   consent_law &lt;chr&gt;, consent_practice &lt;chr&gt;, consistent &lt;chr&gt;, ccode &lt;chr&gt;,
+#   and abbreviated variable names ¹​pop_dens, ²​health_lag, ³​pubhealth</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>skimr<span class="sc">::</span><span class="fu">skim</span>(organdata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
 <caption>Data summary</caption>
@@ -841,18 +858,69 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tbody>
 </table>
 </div>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Scatterplot: Only tells us distribution of </span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(organdata,<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> donors))</span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(organdata, <span class="fu">aes</span>(<span class="at">y =</span> donors, <span class="at">x =</span> year))</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="basic-example_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="672"></p>
+<p><img src="danl310-2023-02-14_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Boxplot</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="co"># p &lt;- ggplot(organdata,aes(x = factor(year), y = donors))</span></span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="co"># p + geom_bar()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># p &lt;- ggplot(organdata, aes(x= year, y = donors))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>organdata</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 238 × 21
+   country  year       donors   pop pop_d…¹   gdp gdp_lag health healt…² pubhe…³
+   &lt;chr&gt;    &lt;date&gt;      &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt; &lt;int&gt;   &lt;int&gt;  &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+ 1 Austral… NA          NA    17065   0.220 16774   16591   1300    1224     4.8
+ 2 Austral… 1991-01-01  12.1  17284   0.223 17171   16774   1379    1300     5.4
+ 3 Austral… 1992-01-01  12.4  17495   0.226 17914   17171   1455    1379     5.4
+ 4 Austral… 1993-01-01  12.5  17667   0.228 18883   17914   1540    1455     5.4
+ 5 Austral… 1994-01-01  10.2  17855   0.231 19849   18883   1626    1540     5.4
+ 6 Austral… 1995-01-01  10.2  18072   0.233 21079   19849   1737    1626     5.5
+ 7 Austral… 1996-01-01  10.6  18311   0.237 21923   21079   1846    1737     5.6
+ 8 Austral… 1997-01-01  10.3  18518   0.239 22961   21923   1948    1846     5.7
+ 9 Austral… 1998-01-01  10.5  18711   0.242 24148   22961   2077    1948     5.9
+10 Austral… 1999-01-01   8.67 18926   0.244 25445   24148   2231    2077     6.1
+# … with 228 more rows, 11 more variables: roads &lt;dbl&gt;, cerebvas &lt;int&gt;,
+#   assault &lt;int&gt;, external &lt;int&gt;, txp_pop &lt;dbl&gt;, world &lt;chr&gt;, opt &lt;chr&gt;,
+#   consent_law &lt;chr&gt;, consent_practice &lt;chr&gt;, consistent &lt;chr&gt;, ccode &lt;chr&gt;,
+#   and abbreviated variable names ¹​pop_dens, ²​health_lag, ³​pubhealth</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># skimr::skim(organdata)</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>organdata <span class="ot">&lt;-</span> organdata <span class="sc">%&gt;%</span> </span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">year</span>(year))</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>organdata</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 238 × 21
+   country  year donors   pop pop_d…¹   gdp gdp_lag health healt…² pubhe…³ roads
+   &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt; &lt;int&gt;   &lt;int&gt;  &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;
+ 1 Austra…    NA  NA    17065   0.220 16774   16591   1300    1224     4.8 137. 
+ 2 Austra…  1991  12.1  17284   0.223 17171   16774   1379    1300     5.4 122. 
+ 3 Austra…  1992  12.4  17495   0.226 17914   17171   1455    1379     5.4 113. 
+ 4 Austra…  1993  12.5  17667   0.228 18883   17914   1540    1455     5.4 111. 
+ 5 Austra…  1994  10.2  17855   0.231 19849   18883   1626    1540     5.4 108. 
+ 6 Austra…  1995  10.2  18072   0.233 21079   19849   1737    1626     5.5 112. 
+ 7 Austra…  1996  10.6  18311   0.237 21923   21079   1846    1737     5.6 108. 
+ 8 Austra…  1997  10.3  18518   0.239 22961   21923   1948    1846     5.7  95.4
+ 9 Austra…  1998  10.5  18711   0.242 24148   22961   2077    1948     5.9  93.8
+10 Austra…  1999   8.67 18926   0.244 25445   24148   2231    2077     6.1  93.2
+# … with 228 more rows, 10 more variables: cerebvas &lt;int&gt;, assault &lt;int&gt;,
+#   external &lt;int&gt;, txp_pop &lt;dbl&gt;, world &lt;chr&gt;, opt &lt;chr&gt;, consent_law &lt;chr&gt;,
+#   consent_practice &lt;chr&gt;, consistent &lt;chr&gt;, ccode &lt;chr&gt;, and abbreviated
+#   variable names ¹​pop_dens, ²​health_lag, ³​pubhealth</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(organdata, <span class="fu">aes</span>(<span class="at">y =</span> donors, <span class="at">x =</span> <span class="fu">factor</span>(year)))</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="danl310-2023-02-14_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(organdata, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> donors))</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span> <span class="fu">facet_wrap</span>(.<span class="sc">~</span> country)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="danl310-2023-02-14_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid" width="672"></p>
+</div>
 </div>
 
 

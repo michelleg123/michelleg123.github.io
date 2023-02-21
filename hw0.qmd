@@ -4,10 +4,20 @@ format: html
 editor: visual
 ---
 
+\-\--
+
+title: "Homework 0"
+
+format: html
+
+editor: visual
+
+\-\--
+
 ```{r setup, include = F}
 library(tidyverse)
 knitr::opts_chunk$set(warning = F, message = F,
-                      fig.height = 14, fig.width = 7)
+                      fig.height = 7, fig.width = 7)
 ```
 
 # ggplot
@@ -20,5 +30,3 @@ The following boxplot shows how the distribution of city MPG (`cty`) varies by a
 ggplot(mpg) +
   geom_boxplot(aes(x = class, y = cty, fill = class))
 ```
-
-

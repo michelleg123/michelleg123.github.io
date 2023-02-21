@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Awesome Me">
+<meta name="dcterms.date" content="2023-02-21">
 
-<title>Michelle Gagliardo - Homework 0</title>
+<title>Michelle Gagliardo - Homework 1</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -126,7 +128,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </head>
 
-<body class="nav-fixed">
+<body class="floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -173,32 +175,49 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#ggplot" id="toc-ggplot" class="nav-link active" data-scroll-target="#ggplot">ggplot</a>
+  <li><a href="#q0" id="toc-q0" class="nav-link active" data-scroll-target="#q0"><span class="toc-section-number">1</span>  Q0</a></li>
+  <li><a href="#ggplot" id="toc-ggplot" class="nav-link" data-scroll-target="#ggplot"><span class="toc-section-number">2</span>  ggplot</a>
   <ul class="collapse">
-  <li><a href="#why-ggplot-is-awesome" id="toc-why-ggplot-is-awesome" class="nav-link" data-scroll-target="#why-ggplot-is-awesome">Why ggplot is awesome</a></li>
+  <li><a href="#why-ggplot-is-awesome" id="toc-why-ggplot-is-awesome" class="nav-link" data-scroll-target="#why-ggplot-is-awesome"><span class="toc-section-number">2.1</span>  Why ggplot is awesome</a></li>
   </ul></li>
+  <li><a href="#q1" id="toc-q1" class="nav-link" data-scroll-target="#q1"><span class="toc-section-number">3</span>  Q1</a></li>
+  <li><a href="#q2" id="toc-q2" class="nav-link" data-scroll-target="#q2"><span class="toc-section-number">4</span>  Q2</a></li>
   </ul>
 </nav>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Homework 0</h1>
+<h1 class="title">Homework 1</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Awesome Me </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 21, 2023</p>
+    </div>
+  </div>
   
     
   </div>
@@ -206,26 +225,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<p>---</p>
-<p>title: “Homework 0”</p>
+<hr>
+<p>title: “Homework 1”</p>
 <p>format: html</p>
 <p>editor: visual</p>
-<p>---</p>
-<section id="ggplot" class="level1">
-<h1>ggplot</h1>
-<section id="why-ggplot-is-awesome" class="level2">
-<h2 class="anchored" data-anchor-id="why-ggplot-is-awesome">Why ggplot is awesome</h2>
+<hr>
+<section id="q0" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Q0</h1>
+</section>
+<section id="ggplot" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> ggplot</h1>
+<section id="why-ggplot-is-awesome" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="why-ggplot-is-awesome"><span class="header-section-number">2.1</span> Why ggplot is awesome</h2>
 <p>The following boxplot shows how the distribution of city MPG (<code>cty</code>) varies by a type of cars (<code>class</code>).</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg) <span class="sc">+</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> class, <span class="at">y =</span> cty, <span class="at">fill =</span> class))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="hw0_files/figure-html/mpg-box-1.png" class="img-fluid" width="672"></p>
+<p><img src="hw1_files/figure-html/mpg-box-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-
-
 </section>
+</section>
+<section id="q1" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Q1</h1>
+</section>
+<section id="q2" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Q2</h1>
+
+
 </section>
 
 </main> <!-- /main -->
