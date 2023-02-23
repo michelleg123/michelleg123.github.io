@@ -67,7 +67,7 @@
     "href": "hw1_Gagliardo.html",
     "title": "Homework 1",
     "section": "",
-    "text": "1 Q2a\n\n\n\n\n\n\n\n2 Q2b\n\n\n\n\n\n\n\n3 Q2c\n\n\ngeom_density_ridges: na.rm = FALSE, panel_scaling = TRUE\nstat_density_ridges: na.rm = FALSE\nposition_points_sina \n\n\n\n\n\n\n\n4 Q2d\n\n\n\n\n\n\n\n5 Q2e\n\n\n\n\n\n\n\n6 Q2f\n\nmale_Aus <- read_csv(\n  'https://bcdanl.github.io/data/aus_athletics_male.csv')\np <- ggplot(data = male_Aus, aes(x = height, y = pcBfat, fill = sport, shape = sport )) \np + geom_point(alpha = 0.8, size = 3) + \n  scale_shape_manual(values = 21:25)+\n  scale_fill_manual(values = c(rgb(188/255,77/255,72/255), 'grey','grey','grey','grey'))+\n  theme_minimal() +\n  labs(x = \"height (cm)\", y = \"% body fat\")\n\n\n\n\n\n\n7 Q2g\n\n\n\n\n\n\n\n8 Q2h"
+    "text": "1 Q2a\n\n\n\n\n\n\n\n2 Q2b\n\n\n\n\n\n\n\n3 Q2c\n\n\ngeom_density_ridges: na.rm = FALSE, panel_scaling = TRUE\nstat_density_ridges: na.rm = FALSE\nposition_points_sina \n\n\n\n\n\n\n\n4 Q2d\n\n\n\n\n\n\n\n5 Q2e\n\n\n\n\n\n\n\n6 Q2f\n\n\n\n\n\n\n\n7 Q2g\n\n\n\n\n\n\n\n8 Q2h"
   },
   {
     "objectID": "index.html",

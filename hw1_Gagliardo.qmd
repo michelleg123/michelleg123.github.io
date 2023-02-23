@@ -81,7 +81,7 @@ p + geom_col() +
 
 # Q2f
 
-```{r}
+```{r, echo = F}
 male_Aus <- read_csv(
   'https://bcdanl.github.io/data/aus_athletics_male.csv')
 p <- ggplot(data = male_Aus, aes(x = height, y = pcBfat, fill = sport, shape = sport )) 
