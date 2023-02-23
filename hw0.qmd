@@ -4,16 +4,6 @@ format: html
 editor: visual
 ---
 
-\-\--
-
-title: "Homework 0"
-
-format: html
-
-editor: visual
-
-\-\--
-
 ```{r setup, include = F}
 library(tidyverse)
 knitr::opts_chunk$set(warning = F, message = F,

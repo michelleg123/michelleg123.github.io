@@ -16,7 +16,7 @@ website:
           - text: hw0
             href: hw0.qmd
           - text: hw1
-            href: hw1.qmd
+            href: hw1_Gagliardo.qmd
             
 format:
   html:

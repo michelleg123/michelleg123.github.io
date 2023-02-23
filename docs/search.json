@@ -60,28 +60,14 @@
     "href": "hw0.html",
     "title": "Homework 0",
     "section": "",
-    "text": "---\ntitle: “Homework 0”\nformat: html\neditor: visual\n---"
+    "text": "The following boxplot shows how the distribution of city MPG (cty) varies by a type of cars (class).\n\nggplot(mpg) +\n  geom_boxplot(aes(x = class, y = cty, fill = class))"
   },
   {
-    "objectID": "hw0.html#why-ggplot-is-awesome",
-    "href": "hw0.html#why-ggplot-is-awesome",
-    "title": "Homework 0",
-    "section": "Why ggplot is awesome",
-    "text": "Why ggplot is awesome\nThe following boxplot shows how the distribution of city MPG (cty) varies by a type of cars (class).\n\nggplot(mpg) +\n  geom_boxplot(aes(x = class, y = cty, fill = class))"
-  },
-  {
-    "objectID": "hw1.html",
-    "href": "hw1.html",
+    "objectID": "hw1_Gagliardo.html",
+    "href": "hw1_Gagliardo.html",
     "title": "Homework 1",
     "section": "",
-    "text": "title: “Homework 1”\nformat: html\neditor: visual"
-  },
-  {
-    "objectID": "hw1.html#why-ggplot-is-awesome",
-    "href": "hw1.html#why-ggplot-is-awesome",
-    "title": "Homework 1",
-    "section": "2.1 Why ggplot is awesome",
-    "text": "2.1 Why ggplot is awesome\nThe following boxplot shows how the distribution of city MPG (cty) varies by a type of cars (class).\n\nggplot(mpg) +\n  geom_boxplot(aes(x = class, y = cty, fill = class))"
+    "text": "1 Q2a\n\n\n\n\n\n\n\n2 Q2b\n\n\n\n\n\n\n\n3 Q2c\n\n\ngeom_density_ridges: na.rm = FALSE, panel_scaling = TRUE\nstat_density_ridges: na.rm = FALSE\nposition_points_sina \n\n\n\n\n\n\n\n4 Q2d\n\n\n\n\n\n\n\n5 Q2e\n\n\n\n\n\n\n\n6 Q2f\n\nmale_Aus <- read_csv(\n  'https://bcdanl.github.io/data/aus_athletics_male.csv')\np <- ggplot(data = male_Aus, aes(x = height, y = pcBfat, fill = sport, shape = sport )) \np + geom_point(alpha = 0.8, size = 3) + \n  scale_shape_manual(values = 21:25)+\n  scale_fill_manual(values = c(rgb(188/255,77/255,72/255), 'grey','grey','grey','grey'))+\n  theme_minimal() +\n  labs(x = \"height (cm)\", y = \"% body fat\")\n\n\n\n\n\n\n7 Q2g\n\n\n\n\n\n\n\n8 Q2h"
   },
   {
     "objectID": "index.html",
