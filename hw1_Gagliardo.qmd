@@ -1,0 +1,124 @@
+---
+title: "Homework 1 "
+author: "Awesome Me"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+format:
+  html:
+    toc: true
+    toc-location: left
+    number-sections: true
+editor: visual
+---
+
+```{r setup, include = F}
+library(tidyverse)
+library(skimr)   # a better summary of data.frame
+library(scales)  # scales for ggplot
+library(ggthemes)  # additional ggplot themes
+theme_set(theme_minimal()) # setting the minimal theme for ggplot
+# setting default chunk options
+knitr::opts_chunk$set(echo = T, eval = T,
+                      message=F, warning = F) 
+```
+
+# Q2a
+
+```{r, echo = F, fig.height = 5}
+ncdc_temp <- read_csv(
+  'https://bcdanl.github.io/data/ncdc_temp_cleaned.csv')
+theme_set(theme_minimal())
+p <- ggplot(ncdc_temp, aes(x = date, y = temperature, color = location))
+p + geom_line(size = 1.1) +
+  scale_x_date(labels = date_format("%b")) +
+  labs(x = "month", y = "temperature (°F)")
+
+
+
+```
+
+# Q2b
+
+```{r,echo = F, fig.height= 5}
+theme_set(theme_clean())
+p <- ggplot( data = ncdc_temp, aes(x = factor(month), y = temperature))
+p + geom_boxplot(fill = "lightgray") +
+  labs(x = "month", y = "mean temperature(°F)") 
+```
+
+# Q2c
+
+```{r,echo = F, fig.height= 5}
+ggridges::geom_density_ridges()
+p <- ggplot( data = ncdc_temp, aes(x = temperature, y = factor(month)))
+p + ggridges::geom_density_ridges(color = "white", fill = rgb(72/255, 164/255, 227/255) )+ 
+  labs(x = "mean temperature(F)", y = "month")
+```
+
+# Q2d
+
+```{r,echo = F, fig.height= 5}
+theme_set(theme_minimal())
+mtcars <- mtcars
+p <- ggplot(data = mtcars, aes(x = disp, y = mpg, color = hp))
+p + geom_point() + 
+  labs(x = "displacement(cu. in.)", y = "fuel efficiency(mpg)")
+
+```
+
+# Q2e
+
+```{r,echo = F, fig.height= 5}
+popgrowth_df <- read_csv(
+  'https://bcdanl.github.io/data/popgrowth.csv')
+
+p <- ggplot(data = popgrowth_df, aes(x = popgrowth , y = reorder(state,popgrowth), fill = 
+                                       region))
+p + geom_col() + 
+  scale_x_continuous(labels = scales::percent) + 
+  theme(legend.position = c(.7,.35)) + 
+  labs(x = "population growth, 2000 to 2010") 
+```
+
+# Q2f
+
+```{r, echo = F}
+male_Aus <- read_csv(
+  'https://bcdanl.github.io/data/aus_athletics_male.csv')
+p <- ggplot(data = male_Aus, aes(x = height, y = pcBfat, fill = sport, shape = sport )) 
+p + geom_point(alpha = 0.8, size = 3) + 
+  scale_shape_manual(values = 21:25)+
+  scale_fill_manual(values = c(rgb(188/255,77/255,72/255), 'grey','grey','grey','grey'))+
+  theme_minimal() +
+  labs(x = "height (cm)", y = "% body fat")
+
+```
+
+# Q2g
+
+```{r,echo = F, fig.height= 5}
+titanic <- read_csv(
+  'https://bcdanl.github.io/data/titanic_cleaned.csv')
+
+theme_set(theme_minimal())
+p <- ggplot(data = titanic, aes(x = age, y = after_stat(count), 
+                                fill = sex, color = sex))
+p + geom_density() +
+  geom_density(data = titanic,  aes(x = age, y = after_stat(count)))+
+  facet_wrap(~sex, nrow = 1) +
+  labs(x = "passenger age (years)") +
+  theme(legend.position = 'bottom', legend.title=element_blank())
+
+```
+
+# Q2h
+
+```{r,echo = F, fig.height= 5}
+cows_filtered <- read_csv(
+  'https://bcdanl.github.io/data/cows_filtered.csv')
+
+p <- ggplot(cows_filtered, aes(butterfat/100, color = breed, fill = breed))
+p + geom_density(alpha = 0.2) + 
+ scale_x_continuous(labels = scales::percent) + 
+ labs(x = 'butterfat contents')
+
+```

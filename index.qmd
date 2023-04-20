@@ -1,0 +1,36 @@
+---
+title: "Michelle Gagliardo" 
+about:
+  template: solana
+  image: img/logo.png
+  links:
+    - text: GitHub
+      icon: github
+      href: https://github.com/michelleg123
+    - text: LinkedIn
+      icon: linkedin
+      href: https://www.linkedin.com/in/YOUR_LINKEDIN/
+    - text: Twitter
+      icon: twitter
+      href: https://twitter.com/YOUR_SOCIAL_MEDIA
+    - text: Email
+      icon: envelope
+      href: mailto:YOUR_EMAIL@geneseo.edu
+    - text: Résumé
+      icon: file-pd
+      href: https://YOUR_GITHUB.github.io/YOUR_RESUME.pdf
+---
+
+
+I am a student at State University of New York at Geneseo.
+
+I am interested in statistics and data analysis. 
+
+I enjoy playing the guitar and running. 
+
+
+## Education
+
+**State University of New York at Geneseo**, 2023<br>
+- B.A./B.S. in YOUR MAJOR<br>
+- YOUR MINOR

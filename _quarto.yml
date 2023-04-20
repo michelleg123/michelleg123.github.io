@@ -1,0 +1,31 @@
+project:
+  type: website
+  output-dir: docs
+  
+website:
+  title: "Michelle Gagliardo"
+  page-footer: "Copyright 2023, YOUR NAME" 
+  reader-mode: false
+  navbar:
+    pinned: true
+    left:
+      - text: Project
+        href: mtpres.qmd
+      - text: Homework
+        menu:
+          - text: hw0
+            href: hw0.qmd
+          - text: hw1
+            href: hw1_Gagliardo.qmd
+          - text: hw2
+            href: hw2_Gagliardo.qmd
+            
+format:
+  html:
+    theme:
+      light: flatly
+      dark: [darkly, theme-dark.scss]
+    # mainfont: Georgia, serif;
+    # mainfont: Gill Sans, sans-serif;
+    toc: true
+    include-after-body: target_blank.html

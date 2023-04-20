@@ -1,0 +1,66 @@
+---
+title: "Midterm Presentation"
+editor: visual
+---
+
+# California Housing Prices
+
+## Andrew Mosbo and Michelle Gagliardo
+
+### 3/30/23
+
+### DANL-310
+
+### Dr. Choe
+
+## Why is this Important?
+
+Houses in California can range from a few thousand dollars to hundreds of millions. If we look at the median price for each "block", we can use a data set which is less skewed. It is interesting because of the range of prices, we might be able to find a model which can explain the relationship between median house cost and the attributes of the houses. So, can we find a model that can predict house cost?
+
+## The Data
+
+Looking at a map of the houses in California with information on the house price and population, we can see that areas close to the coast, like LA and San Francisco, have a higher cost while more inland areas have a lower cost.
+
+```{r, echo = F, results='hide',fig.keep='all', warning = F, message=FALSE}
+invisible(library(tidyverse))
+invisible(library(ggthemes))
+invisible(library(Hmisc))
+invisible(library(viridisLite))
+
+us_states <- map_data('county')
+
+cali_dat <- read.csv('california_housing.csv')
+
+
+la <- c('LA', -118.15, 34.03)
+sf <- c('San Francisco', -122.24, 37.46)
+
+locs <- as.data.frame(matrix(c(la, sf), nrow = 2, byrow = T))
+colnames(locs) <- c('place','long','lat')
+
+ggplot(cali_dat) +
+  geom_polygon(data = filter(us_states, region == 'california'),
+               mapping = aes(x = long, y = lat, group = group),
+               fill = "white", color = "black") +
+  geom_point(aes(x = longitude, y = latitude, color = medianHouseValue, size = population), alpha = .5) +
+  coord_fixed() +
+  theme_map() +
+  theme(legend.position = "right") +
+  scale_color_continuous(type = 'viridis') +
+  labs(color = 'Median House Value', size = 'Population', title = 'Median House Prices and Population in California') +
+  ggrepel::geom_text_repel(data = locs, aes(x = as.numeric(long), y = as.numeric(lat), label = place), hjust = 3, 
+                           vjust = 3)
+
+
+hist.data.frame(cali_dat)
+```
+
+Since we are dealing with ordered pair data for location, it might be important to create a new variable which represents the distance to the coast. This could be obtained using Tableau.
+
+## Model Type
+
+Our model will most likely use a linear model.
+
+## Plans
+
+We could use modified data which could be represented as proportions or percentages. For example, we have totalRooms and totalBedrooms variables. If we consider a variable of percentage of rooms which are bedrooms, the numbers would be better represented. We could expect more expensive houses to have lower percentage of bedrooms compared to cheaper houses.

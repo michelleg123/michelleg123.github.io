@@ -1,0 +1,183 @@
+---
+title: "Habbit"
+author: "Awesome Me"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+format:
+  html:
+    toc: true
+    toc-location: left
+    number-sections: true
+editor: visual
+---
+
+```{r setup, include = F}
+library(tidyverse)
+library(skimr)   # a better summary of data.frame
+library(scales)  # scales for ggplot
+library(ggthemes)  # additional ggplot themes
+library(socviz)
+theme_set(theme_minimal()) # setting the minimal theme for ggplot
+# setting default chunk options
+knitr::opts_chunk$set(echo = T, eval = T,
+                      message=F, warning = F) 
+```
+
+## Quarterly Results {.tabset .tabset-pills}
+
+### By Product
+
+(tab content) 1
+
+### By Region
+
+(tab content) 2
+
+```{r}
+library(tidyverse)
+ggplot(mpg) +
+  geom_boxplot(aes(x = class, y = hwy))
+```
+
+# Example Title {.unnumbered}
+
+Here is some example title.
+
+## Section X
+
+This is my introduction.
+
+```{r}
+x <- 1
+print(x)
+```
+
+# Section 1
+
+Wake up
+
+## Section 1.1
+
+Drink water
+
+## Section 1.2
+
+Sleep again
+
+# Section 2
+
+Wake up
+
+```{r}
+library(tidyverse)
+socviz::titanic
+p <- ggplot(data = titanic,
+            mapping = aes(x = fate, y = percent, fill = sex))
+p + geom_bar(position = "dodge", stat = "identity") +
+  theme(legend.position = "top")
+
+
+```
+
+```{r}
+# Let's try to replicate the graph in the lecture slide. 
+# Bar charts are good for visualizing the trend 
+socviz::oecd_sum
+p <- ggplot(oecd_sum, aes(x= year, y = diff, fill = hi_lo))
+
+```
+
+```{r}
+mpg <- mpg 
+p <- ggplot(mpg, aes(x=class, fill = drv))
+
+```
+
+-   Gapminder practice
+
+```{r, fig.height = 20, fig.width = 7}
+
+# Revisit gapminder plots and experiment with different ways to facet the data 
+library(gapminder)
+gapminder <- gapminder
+p <- ggplot(gapminder, aes(x = pop, y = gdpPercap))
+p + geom_point(alpha = 0.3) + 
+  geom_smooth() + 
+  facet_grid(year ~ .)
+
+```
+
+```{r}
+
+# Life expectancy vs gdp per capita 
+p <- ggplot(gapminder, aes(x=lifeExp, y = gdpPercap)) 
+p + geom_bin2d(bins = c(20,50))
+
+# Lighter the cell, more frequent the pair of values are. 
+# Try binwidth instead.
+
+```
+
+```{r}
+library(socviz)
+socviz::gss_sm
+gss_sm
+p <- ggplot(gss_sm, aes(x=relig, fill = bigregion))
+p + geom_bar(position = "dodge2") + coord_flip()
+
+```
+
+```{r}
+# Use pipes to summarize data. Group each religion by each big region : 
+
+library(socviz)
+rel_by_region <- gss_sm %>% 
+  group_by(bigregion, relig) %>% 
+  summarize(N = n()) %>% 
+  mutate(freq = N / sum(N), pct = round((freq*100), 0 ))
+  
+rel_by_region
+
+# Now, we can use the values directly from the summarized data frame
+
+p <- ggplot(rel_by_region, 
+            aes( x = bigregion, 
+                 y = pct, 
+                 fill = relig))
+p + geom_col( position = "dodge2" ) +
+    labs(x = "Region", 
+         y = "Percent", 
+         fill = "Religion") +
+    theme(legend.position 
+            = "top")
+```
+
+```{r}
+# Replicate the bar graph 
+# library(hrbrthemes)
+# p <- ggplot(rel_by_region, aes(x = religion, y = pct, fill = religio))
+# p + geom_col() + facet_grid( .~bigregion) + 
+  # coord_flip() + guides(fill = "none") + theme_ipsum() + 
+  # labs(X = NULL)
+
+
+```
+
+```{r}
+# Donors vs year
+library(skimr)
+library(lubridate)
+# organdata
+skimr::skim(organdata)
+
+# Scatterplot: Only tells us distribution of 
+p <- ggplot(organdata,aes(x = year, y = donors))
+p + geom_point()
+# Boxplot
+# p <- ggplot(organdata,aes(x = factor(year), y = donors))
+# p + geom_bar()
+
+```
+
+```{r}
+# p <- ggplot(organdata, aes(x= year, y = donors))
+```
