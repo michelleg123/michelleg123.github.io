@@ -1,0 +1,86 @@
+[
+  {
+    "objectID": "basic-example.html",
+    "href": "basic-example.html",
+    "title": "Habbit",
+    "section": "",
+    "text": "(tab content) 1\n\n\n\n(tab content) 2\n\nlibrary(tidyverse)\nggplot(mpg) +\n  geom_boxplot(aes(x = class, y = hwy))"
+  },
+  {
+    "objectID": "basic-example.html#section-x",
+    "href": "basic-example.html#section-x",
+    "title": "Habbit",
+    "section": "0.2 Section X",
+    "text": "0.2 Section X\nThis is my introduction.\n\nx <- 1\nprint(x)\n\n[1] 1"
+  },
+  {
+    "objectID": "basic-example.html#section-1.1",
+    "href": "basic-example.html#section-1.1",
+    "title": "Habbit",
+    "section": "1.1 Section 1.1",
+    "text": "1.1 Section 1.1\nDrink water"
+  },
+  {
+    "objectID": "basic-example.html#section-1.2",
+    "href": "basic-example.html#section-1.2",
+    "title": "Habbit",
+    "section": "1.2 Section 1.2",
+    "text": "1.2 Section 1.2\nSleep again"
+  },
+  {
+    "objectID": "hw0.html",
+    "href": "hw0.html",
+    "title": "Homework 0",
+    "section": "",
+    "text": "The following boxplot shows how the distribution of city MPG (cty) varies by a type of cars (class).\n\nggplot(mpg) +\n  geom_boxplot(aes(x = class, y = cty, fill = class))"
+  },
+  {
+    "objectID": "hw1_Gagliardo.html",
+    "href": "hw1_Gagliardo.html",
+    "title": "Homework 1",
+    "section": "",
+    "text": "1 Q2a\n\n\n\n\n\n\n\n2 Q2b\n\n\n\n\n\n\n\n3 Q2c\n\n\ngeom_density_ridges: na.rm = FALSE, panel_scaling = TRUE\nstat_density_ridges: na.rm = FALSE\nposition_points_sina \n\n\n\n\n\n\n\n4 Q2d\n\n\n\n\n\n\n\n5 Q2e\n\n\n\n\n\n\n\n6 Q2f\n\n\n\n\n\n\n\n7 Q2g\n\n\n\n\n\n\n\n8 Q2h"
+  },
+  {
+    "objectID": "hw2_Gagliardo.html",
+    "href": "hw2_Gagliardo.html",
+    "title": "Homework 2",
+    "section": "",
+    "text": "1 Q2a\n\n\nRows: 704 Columns: 5\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (2): country, region\ndbl (3): year, cpi, hdi\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: Removed 24 rows containing non-finite values (`stat_smooth()`).\n\n\nWarning in eval(family$initialize): non-integer #successes in a binomial glm!\n\n\nWarning: Removed 24 rows containing missing values (`geom_point()`).\n\n\n\n\n\n#Q2b\n\n\nRows: 7038907 Columns: 5\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\ndbl (5): YEAR, ASECWT, SEX, LABFORCE, NCHLT5\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n`summarise()` has grouped output by 'YEAR', 'SEX'. You can override using the `.groups` argument.\n\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\n\nWarning: Removed 2 rows containing missing values (`geom_line()`).\n\n\nWarning: Removed 2 rows containing missing values (`geom_label_repel()`).\n\n\nWarning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family not\nfound in Windows font database\n\nWarning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family not\nfound in Windows font database\n\n\nWarning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font\nfamily not found in Windows font database\n\n\nWarning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family not\nfound in Windows font database\n\nWarning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family not\nfound in Windows font database\n\n\nWarning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font\nfamily not found in Windows font database\n\nWarning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font\nfamily not found in Windows font database\n\nWarning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font\nfamily not found in Windows font database\n\nWarning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font\nfamily not found in Windows font database\n\nWarning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font\nfamily not found in Windows font database\n\nWarning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font\nfamily not found in Windows font database\n\nWarning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font\nfamily not found in Windows font database\n\nWarning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font\nfamily not found in Windows font database\n\nWarning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font\nfamily not found in Windows font database\n\nWarning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font\nfamily not found in Windows font database\n\n\nWarning: ggrepel: 80 unlabeled data points (too many overlaps). Consider\nincreasing max.overlaps\n\n\nWarning: ggrepel: 82 unlabeled data points (too many overlaps). Consider\nincreasing max.overlaps\n\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\n\nWarning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font\nfamily not found in Windows font database\n\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\n\nWarning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font\nfamily not found in Windows font database\n\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\n\nWarning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font\nfamily not found in Windows font database\n\nWarning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font\nfamily not found in Windows font database\n\n\nWarning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :\nfont family not found in Windows font database\n\n\nWarning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font\nfamily not found in Windows font database\n\nWarning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font\nfamily not found in Windows font database\n\nWarning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font\nfamily not found in Windows font database\n\n\n\n\n\n#Q3a\n\n\nRows: 73115 Columns: 24\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (13): _purchase_desc, brand, container, market, buyertype, income, age, ...\ndbl  (5): hh, quantity, dollar_spent, beer_floz, price_per_floz\nlgl  (6): promo, childrenUnder6, children6to17, microwave, dishwasher, singl...\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n\nWarning: Predicate functions must be wrapped in `where()`.\n\n  # Bad\n  data %>% select(is.numeric)\n\n  # Good\n  data %>% select(where(is.numeric))\n\nℹ Please update your code.\nThis message is displayed once per session.\n\n\n\n\n\n#Q3b"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Michelle Gagliardo",
+    "section": "",
+    "text": "I am a student at State University of New York at Geneseo.\nI am interested in statistics and data analysis.\nI enjoy playing the guitar and running."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Michelle Gagliardo",
+    "section": "Education",
+    "text": "Education\nState University of New York at Geneseo, 2023 - B.A./B.S. in YOUR MAJOR - YOUR MINOR"
+  },
+  {
+    "objectID": "mtpres.html",
+    "href": "mtpres.html",
+    "title": "Midterm Presentation",
+    "section": "",
+    "text": "Houses in California can range from a few thousand dollars to hundreds of millions. If we look at the median price for each “block”, we can use a data set which is less skewed. It is interesting because of the range of prices, we might be able to find a model which can explain the relationship between median house cost and the attributes of the houses. So, can we find a model that can predict house cost?\n\n\n\nLooking at a map of the houses in California with information on the house price and population, we can see that areas close to the coast, like LA and San Francisco, have a higher cost while more inland areas have a lower cost.\n\n\n\n\n\n\n\n\nSince we are dealing with ordered pair data for location, it might be important to create a new variable which represents the distance to the coast. This could be obtained using Tableau.\n\n\n\nOur model will most likely use a linear model.\n\n\n\nWe could use modified data which could be represented as proportions or percentages. For example, we have totalRooms and totalBedrooms variables. If we consider a variable of percentage of rooms which are bedrooms, the numbers would be better represented. We could expect more expensive houses to have lower percentage of bedrooms compared to cheaper houses."
+  },
+  {
+    "objectID": "teamproj0.html",
+    "href": "teamproj0.html",
+    "title": "Team Project",
+    "section": "",
+    "text": "This is an example of the team project web-page."
+  },
+  {
+    "objectID": "teamproj0.html#us-county-map-of-climate-change-belief-in-2018",
+    "href": "teamproj0.html#us-county-map-of-climate-change-belief-in-2018",
+    "title": "Team Project",
+    "section": "1 US county map of climate change belief in 2018",
+    "text": "1 US county map of climate change belief in 2018\n  Estimated percentage who think that global warming is caused mostly by human activities\n\ncc_belief_county <- read_csv(\n  'https://bcdanl.github.io/data/cc_belief_county.csv'\n)\n\n\nlegend_title <- \"\"\n\nggplot(data = cc_belief_county) +\n  geom_polygon(aes(long, lat, group = group, \n                   fill = human2018),\n               color = \"grey\", size = 0.1) +\n  coord_map(\"bonne\", parameters = 41.6) + \n  scale_fill_gradient(legend_title, \n                      low='#0057e7', \n                      high='#d62d20') +\n  theme_map() + \n  theme(legend.position=\"right\") +\n  labs(caption = \"Data source: Yale Climate Change Communication\")"
+  }
+]
