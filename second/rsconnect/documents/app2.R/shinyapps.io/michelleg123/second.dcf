@@ -1,0 +1,13 @@
+name: second
+title: second
+username:
+account: michelleg123
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 8950444
+bundleId: 7134754
+url: https://michelleg123.shinyapps.io/second/
+when: 1682449341.51209
+lastSyncTime: 1682449341.51211
+asMultiple: FALSE
+asStatic: FALSE
