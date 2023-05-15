@@ -1,0 +1,13 @@
+name: hw3shiny
+title: hw3shiny
+username:
+account: michelleg123
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 9114650
+bundleId: 7221685
+url: https://michelleg123.shinyapps.io/hw3shiny/
+when: 1684183639.37126
+lastSyncTime: 1684183639.37127
+asMultiple: FALSE
+asStatic: FALSE

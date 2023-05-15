@@ -1,0 +1,89 @@
+--- 
+title: "May the 4th "
+subtitle: "SUBTITLE_OF_YOUR_PROJECT<br><br>" 
+author: 
+  - "AUTHOR_1"
+  - "AUTHOR_2"
+  - <br>
+date: "`r Sys.Date()`"
+format: 
+  html
+--- 
+
+```{r setup, include = F}
+library(tidyverse)
+library(skimr)   # a better summary of data.frame
+library(scales)  # scales for ggplot
+library(ggthemes)  # additional ggplot themes
+library(socviz)
+theme_set(theme_minimal()) # setting the minimal theme for ggplot
+# setting default chunk options
+knitr::opts_chunk$set(echo = T, eval = T,
+                      message=F, warning = F) 
+```
+
+
+```{r}
+# library(tidyverse)
+# oj <- read_csv('https://bcdanl.github.io/dominick_oj.csv')
+# nvars <- format(round(ncol(oj), 0), 
+#                 nsmall=0, 
+#                 big.mark=",") 
+# nobs <- format(round(nrow(oj), 0), 
+ #                nsmall=0, 
+  #               big.mark=",")
+
+
+# The number of variables is `r nvars`; the number of observations is `r nobs`
+``` 
+
+
+
+
+
+<br>
+
+**Roses** are <span style="color: red;">red</span>, *violets* are <span style="color: blue;">blue</span>.
+
+
+# Introduction 
+- Why does your research project matter? 
+
+- Motivate your project.
+
+- Summarize the project in the last paragraph.
+
+# Data
+
+Summary statistics(Use `skimr::skim()`)
+
+# Conceptual Framework 
+
+- Justify your ML model.
+ - Why the model considers the variables in the model. 
+
+# Model 
+
+- Add some model equation, for example, $y_{i} = \beta_{1} * x_{1i} + \beta_{2} * x_{1i}^{2} + \epsilon_{i}$
+
+
+- For model equation, better to use `$$` for LaTeX math equations 
+$$y_{i} = \beta_{1} * x_{1i} + \beta_{2} * x_{1i}^{2} + \epsilon_{i}$$
+- In latex equation, you can add horizontal space by using the following: 
+- `\,`
+- `\;`
+- `quad`
+- `qquad`
+
+
+# Result 
+
+- Summarize the main result of the model you want to focus.
+
+# Discussion
+
+- Discuss the implication of your model result. 
+
+- You can suggest policy suggestion or business strategy. 
+
+# Conclusion 

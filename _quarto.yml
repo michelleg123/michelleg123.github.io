@@ -21,6 +21,9 @@ website:
             href: hw2_Gagliardo.qmd
           - text : Shiny 
             href: shiny-01.qmd
+          - text: HW 3 SHiny 
+            href: hw3shiny.qmd
+          
             
 format:
   html:
