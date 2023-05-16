@@ -10,7 +10,7 @@ website:
     pinned: true
     left:
       - text: Project
-        href: mtpres.qmd
+        href: danlfinal_pp.qmd
       - text: Homework
         menu:
           - text: hw0
@@ -18,7 +18,6 @@ website:
           - text: hw1
             href: hw1_Gagliardo.qmd
           - text: hw2
-            href: hw2_Gagliardo.qmd
           - text : Shiny 
             href: shiny-01.qmd
           - text: HW 3 SHiny 

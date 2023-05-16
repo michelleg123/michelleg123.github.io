@@ -172,10 +172,14 @@ ggplotly(p, tooltip = "text")
 
 ```
 
-Here, we have an interactive graph that shows the relationship between Distance to the Coast and a given attribute.
+Here, we have an interactive graph that lets you look at four attributes at a given time: 
 
-Shiny Graph goes here :
-
+```{=html}
+<style>iframe{height: 1200px; width: 1000px}</style>
+<iframe height="100%" width="100%" frameborder="no"
+src="https://amosbo14.shinyapps.io/cali2/">
+</iframe>
+```
 ## Linear Regression Model
 
 We tested many different models, and had adjusted R.squared values ranging from 0.2 to 0.6. We settled on one model, which included all attributes found in the data set. We have provided a table of the four models that we considered. Our final model appears first in the table.
